@@ -1,50 +1,49 @@
-* {
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
 
 body {
   display: flex;
   height: 100vh;
-  margin: 0;
   padding: 2rem;
+  margin: 0;
   font-family: $font-family-sans-serif;
   font-size: 16px;
   line-height: 24px;
-  background-color: $uoc-bg;
   color: $uoc-corporate;
+  background-image: url("../images/bg-pattern.jpg");
+  background-repeat: repeat;
 }
 
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+@media only screen and (max-width: $mq-min-width) {
+  [class*="col-"] {
+    width: 100%;
+  }
 }
 
-.uoc-logo {
+.section-title h2::after {
+  position: relative;
+  left: 0;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
-
-  @media (min-width: $mqMinWidth) {
-    max-width: 350px;
-  }
+  width: 50px;
+  height: 3px;
+  margin-top: 3px;
+  content: "";
+  background: #149ddd;
 }
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
+.text-justify {
+  text-align: justify;
+}
 
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
-  }
+.portrait {
+  max-width: 30%;
+}
+
+.portrait-container {
+  display: flex;
+  justify-content: center;
 }
