@@ -6,7 +6,6 @@
 
 body {
   display: flex;
-  height: 100vh;
   padding: 2rem;
   margin: 0;
   font-family: $font-family-sans-serif;
@@ -16,7 +15,6 @@ body {
   background-image: url("../images/bg-pattern.jpg");
   background-repeat: repeat;
 }
-
 
 @media only screen and (max-width: $mq-min-width) {
   [class*="col-"] {
@@ -46,4 +44,9 @@ body {
 .portrait-container {
   display: flex;
   justify-content: center;
+}
+
+.effect-hover:hover {
+  background-color: $uoc-masterbrand;
+  transition: .5s;
 }
